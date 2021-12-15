@@ -1,0 +1,23 @@
+[33mcommit c350ab7f694f1013285574894497c08531b13244[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: shreshth-06 <shreshthchaturvedi2401@gmail.com>
+Date:   Wed Dec 15 20:18:41 2021 +0530
+
+    Added auto dismissing alert messages
+
+[33mcommit a31592b092328bd66e4485a3f8f3ab2f036e9ce8[m
+Author: shreshth-06 <shreshthchaturvedi2401@gmail.com>
+Date:   Wed Dec 15 17:52:03 2021 +0530
+
+    improved the dark mode concept
+
+[33mcommit 9e9c843c8c359fd531c62509bf5d9c30aa1f693a[m
+Author: shreshth-06 <shreshthchaturvedi2401@gmail.com>
+Date:   Wed Dec 15 16:10:38 2021 +0530
+
+    added light/dark mode button for the About us page using useState hooks
+
+[33mcommit 3f5e38f7c2dddff8c80d5837d5fdb3145ccaa519[m
+Author: shreshth-06 <shreshthchaturvedi2401@gmail.com>
+Date:   Wed Dec 15 15:33:30 2021 +0530
+
+    initialized the project and applied props and useState
