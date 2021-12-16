@@ -16,16 +16,13 @@ export default function TextForm(props) {
   };
 
   const clearText = () => {
-    // console.log("uppercase was clicked" + text);
     let newText = "";
     setText(newText);
     props.showAlert(" Text has been cleared", "success");
   };
 
   const handleCopy = () => {
-    let text = document.getElementById("myBox");
-    text.select();
-    navigator.clipboard.writeText(text.value);
+    navigator.clipboard.writeText(text);
     props.showAlert(" Text copied to clipboard", "success");
   };
 
@@ -36,7 +33,6 @@ export default function TextForm(props) {
   };
 
   const handleOnChange = (event) => {
-    // console.log("on change");
     setText(event.target.value);
   };
 
@@ -66,23 +62,26 @@ export default function TextForm(props) {
           ></textarea>
         </div>
 
-        <button className="btn btn-primary mx-2" onClick={handleUpClick}>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleUpClick}>
           Convert to Uppercase
         </button>
 
-        <button className="btn btn-primary mx-2" onClick={handleLoClick}>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleLoClick}>
           Convert to Lowercase
         </button>
 
-        <button className="btn btn-primary mx-2" onClick={clearText}>
+        <button className="btn btn-primary mx-2 my-2" onClick={clearText}>
           Clear Text
         </button>
 
-        <button className="btn btn-primary mx-2" onClick={handleCopy}>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleCopy}>
           Copy Text
         </button>
 
-        <button className="btn btn-primary mx-2" onClick={handleExtraSpaces}>
+        <button
+          className="btn btn-primary mx-2 my-2"
+          onClick={handleExtraSpaces}
+        >
           Remove Extra Spaces
         </button>
       </div>
@@ -95,7 +94,12 @@ export default function TextForm(props) {
       >
         <h2>Your text summary</h2>
         <p>
-          {text.split(" ").length} words and {text.length} characters
+          {
+            text.split(/\s+/).filter((element) => {
+              return element.length !== 0;
+            }).length
+          }{" "}
+          words and {text.length} characters
         </p>
         <p>{0.008 * text.split(" ").length} Minutes to read</p>
         <h2>Preview</h2>
